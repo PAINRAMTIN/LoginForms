@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --PrimaryColor: #C6C3C3;
+    --SecoundColor: #FFFFFF;
+    --BlackColor: #000000;  
+}
+
+body {
+    background-image:   url("https://drive.google.com/uc?export=view&id=1uCohtd5e8ZjrZrhykzct1o1DAE9JNVfS");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration: none;
+    color: var(--SecoundColor);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.Wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.LoginBox {
+    position: relative;
+    width: 450px;
+    backdrop-filter: blur(25px);
+    border: 2px solid var(--PrimaryColor);
+    border-radius: 15px;
+    padding: 7.5em 2.5em 4em 2.5em;
+    color: var(--SecoundColor);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.LoginHeader {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--PrimaryColor);
+    width: 140px;
+    height: 70px;   
+    border-radius: 0 0 20px 20px;
+}
+
+.LoginHeader span {
+    font-size: 30px;
+    color: var(--BlackColor);
+}
+
+.LoginHeader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -30;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 50%;
+    background: transparent;
+    box-shadow: 15px 0 0 0 var(--PrimaryColor);
+}
+
+.LoginHeader::after { 
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30;
+    width: 30px;
+    height: 30px;
+    border-top-left-radius: 50%;
+    background: transparent;
+    box-shadow: -15px 0 0 0 var(--PrimaryColor);
+}
+
+.InputBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.InputField { 
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    background: transparent;
+    color: var(--SecoundColor);
+    padding-inline: 20px 50px;
+    border: 2px solid var(--PrimaryColor);
+    border-radius: 30px;
+    outline: none;
+}
+
+#User {
+    margin-bottom: 10px;
+}
+
+.Label { 
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    transition: 0.2s;
+}
+
+.InputField:focus ~ .Label,
+.InputField:valid .Label {
+    position: absolute;
+    top: -10;
+    left: 20;
+    font-size: 14px;
+    border-radius: 30px;
+    background-color: var(--PrimaryColor);
+    color: var(--BlackColor);
+    padding: 0 10px;
+}
+
+.Icon {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    font-size: 20px;
+}
+
+.RememberForgot { 
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.InputSubmit { 
+    width: 100%;
+    height: 50px;
+    background: #ececec;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.InputSubmit:hover { 
+    background: var(--SecoundColor);
+}
+
+.Register {
+    text-align: center;
+}
+
+.Register a { 
+    font-weight: 500;
+}
+
+@media only screen  and (max-width:564px){
+    .Wrapper { 
+        padding: 20px;
+    }
+
+    .LoginBox { 
+        padding: 7.5em 1.5em 4em 1.5em;
+    }
+}
+
+
+
